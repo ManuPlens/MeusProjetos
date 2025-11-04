@@ -3,7 +3,6 @@
 
 int main() {
 int n;
-
 printf("digite um numero:\n");
 scanf("%d", &n);
 
