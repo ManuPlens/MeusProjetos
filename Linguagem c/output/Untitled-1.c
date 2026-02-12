@@ -1,0 +1,1 @@
+#include <stdio.h>  int main(){      int a, b, c, d;  printf("Digite três números inteiros: ");  scanf("%d %d %d", &a, &b, &c);  printf("\n");  a = b; d = c; d = a; c = b; b = d; b = a;  a = c; d = b; c = d; c = a; b = c; a = d;  printf("%d %d %d %d \n", a, b, c, d);      return 0;  } []
