@@ -1,1 +1,2 @@
-Atividades do curso de Engenharia da Computação.
+Atividades referente ao curso de Engenharia da Computação.
+
