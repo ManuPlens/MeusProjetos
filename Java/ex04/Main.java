@@ -8,17 +8,19 @@ public class Main {
   Scanner sc = new Scanner(System.in);
 
 
-  System.out.println("Digite sua idade:");
-  int idade = sc.nextInt();
+  System.out.println("Digite um número:");
+  int num1 = sc.nextInt();
 
   sc.nextLine(); 
 
-  System.out.println("Digite seu nome:");
-  String nome = sc.nextLine();
+  System.out.println("Digite outro número:");
+  int num2 = sc.nextInt();
 
-  
-
-  System.out.println("Olá, " + nome + "! Você tem " + idade + " anos.");
+  System.out.println("A soma dos números é: " + (num1 + num2));
+  System.out.println("A subtração dos números é: " + (num1 - num2));
+  System.out.println("A multiplicação dos números é: " + (num1 * num2));
+  System.out.println("A divisão dos números é: " + (num1 / num2));
+  System.out.println("O resto da divisão dos números é: " + (num1 % num2));
    
   sc.close();
 
