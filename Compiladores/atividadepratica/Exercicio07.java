@@ -3,7 +3,7 @@ package atividadepratica;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
-public class Exemplo07 extends BaseExemplo {
+public class Exercicio07 extends BaseExemplo {
 
 @Override
 public void executar() {

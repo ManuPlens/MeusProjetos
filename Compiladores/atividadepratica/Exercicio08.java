@@ -13,6 +13,11 @@ public class Exercicio08 extends BaseExemplo{
     Pattern pattern = Pattern.compile(regex);
     Matcher matcher = pattern.matcher(texto);
 
+    /* O método replaceAll usa referências aos grupos ($1, $2, $3):
+       $1: Mantém o que foi capturado no Grupo 1 (DDD e o 9)
+       ****: Substitui literalmente o conteúdo do Grupo 2
+       $3: Mantém o que foi capturado no Grupo 3 (final do número)
+    */
     String resultado = matcher.replaceAll("$1****$3");
 
     System.out.println("Texto original: " + texto);

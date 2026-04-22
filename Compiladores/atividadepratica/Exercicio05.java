@@ -16,7 +16,9 @@ public void executar() {
   System.out.println("A String analisada é: " + texto);
   System.out.println("Números encontrados no texto:");
 
+  // O laço que percorre todo o texto em busca de todas as ocorrências
   while (matcher.find()) {
+    // matcher.group(0) pega o texto total que deu 'match' com a regex
     System.out.println(matcher.group(0));
   }
 
