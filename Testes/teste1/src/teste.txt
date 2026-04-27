@@ -1,0 +1,4 @@
+ola
+manu
+teste
+sem condição
