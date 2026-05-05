@@ -1,0 +1,17 @@
+package ProjetoCifra.Testes;
+
+import ProjetoCifra.Engine.CifraCesar;
+
+public class TesteCifraCesar {
+  public static void executar() {
+    CifraCesar algoritmo = new CifraCesar (5);
+    String teste = "COMPILADORES";
+
+    String cifrado = algoritmo.cifrar(teste);
+    String decifrado = algoritmo.decifrar(cifrado);
+    System.out.println("Original: " + teste);
+    System.out.println("Cifrado: " + cifrado);
+    System.out.println("Decifrado: " + decifrado);
+  }
+  
+}

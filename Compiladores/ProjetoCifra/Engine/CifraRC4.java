@@ -1,0 +1,50 @@
+package ProjetoCifra.Engine;
+
+public class CifraRC4 {
+  private String CHAVE;
+
+  public CifraRC4() {
+    CHAVE = "UNIDERP";
+    super();
+  }
+  public CifraRC4(String chave) {
+    CHAVE = chave;
+    super();
+  }
+
+  public byte[] processar(byte[] dados) {
+    int[] s = inicializarKSA(CHAVE.getBytes());
+    byte[] saida = new byte[dados.length];
+    int i = 0, j = 0;
+    for (int k = 0; k < dados.length; k++) {
+      i = (i + 1) % 256;
+            j = (j + s[i]) % 256;
+            // Swap
+            int temp = s[i];
+            s[i] = s[j];
+            s[j] = temp;
+            int t = (s[i] + s[j]) % 256;
+            int valorK = s[t];
+
+            // Operação XOR
+            saida[k] = (byte) (dados[k] ^ valorK);
+        }
+        return saida;
+    }
+
+    private int[] inicializarKSA(byte[] chave) {
+        int[] s = new int[256];
+        for (int i = 0; i < 256; i++)
+            s[i] = i;
+        int j = 0;
+        for (int i = 0; i < 256; i++) {
+            j = (j + s[i] + (chave[i % chave.length] & 0xFF)) % 256;
+            int temp = s[i];
+            s[i] = s[j];
+            s[j] = temp;
+        }
+        return s;
+    }
+}
+    
+  
