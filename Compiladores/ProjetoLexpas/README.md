@@ -1,18 +1,26 @@
-## Getting Started
+# 🔍 Analisador Léxico em Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto é um **Analisador Léxico** (Scanner) desenvolvido em Java. Ele é capaz de ler arquivos de texto (como códigos em Pascal ou linguagens customizadas), identificar padrões através de **Expressões Regulares (Regex)** e transformar o texto bruto em uma sequência de **Tokens** classificados.
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+## 🚀 Funcionalidades
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+* **Leitura de Arquivos:** Processa arquivos externos utilizando `BufferedReader` e `FileReader`.
+* **Reconhecimento de Padrões:** Identifica Números, Identificadores, Operadores e Delimitadores usando `Pattern` e `Matcher`.
+* **Tabela de Símbolos:** Classifica palavras-chave da linguagem de forma dinâmica.
+* **Tratamento de Erros:** Implementação de blocos `try-catch` para lidar com falhas de leitura ou arquivos inexistentes.
+* **Design Patterns:** Utilização do padrão **Factory** para a criação padronizada de objetos `Token`.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+---
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## 📂 Estrutura do Projeto
 
-## Dependency Management
+O código está organizado em pacotes para melhor manutenção:
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+* `Dominio`: Contém as classes base como `Token`, `TokenType` e a `TokenFactory`.
+* `Mecanismo`: Onde reside a lógica principal do `Scanner` e as definições de `PadroesLexicos`.
+* `Exemplo/Testes`: Classes voltadas para demonstração e validação das funcionalidades.
+
+
+
